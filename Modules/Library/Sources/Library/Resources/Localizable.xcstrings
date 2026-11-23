@@ -1,0 +1,40 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "library_desc_empty" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tracks you save will appear here."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lagu yang kamu simpan akan muncul di sini."
+          }
+        }
+      }
+    },
+    "library_title_empty" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your library is empty."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pustakamu masih kosong."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.3"
+}

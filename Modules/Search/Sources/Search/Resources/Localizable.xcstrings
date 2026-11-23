@@ -1,0 +1,40 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "search_label_prompt" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Artists, Songs, Lyrics, and More"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Artis, Lagu, Lirik, dan Lainnya"
+          }
+        }
+      }
+    },
+    "search_title_find_songs" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find songs"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cari lagu"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.3"
+}
