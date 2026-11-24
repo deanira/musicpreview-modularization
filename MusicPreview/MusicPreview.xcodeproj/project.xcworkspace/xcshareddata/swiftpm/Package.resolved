@@ -1,5 +1,5 @@
 {
-  "originHash" : "be29635de3f539e67076ea2c917adfe877ba4d83bf02f5da26a80bf201a19970",
+  "originHash" : "15915dbbe314ba9156656a7d818c0661ac5bc3adb1754d17c0ed6b8a942a2636",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -16,7 +16,7 @@
       "location" : "https://github.com/deanira/common-musicpreview.git",
       "state" : {
         "branch" : "main",
-        "revision" : "27030335165e315d299d469155630bf646600070"
+        "revision" : "740619b71c3d74e898607d6decaffc197365c5f4"
       }
     },
     {

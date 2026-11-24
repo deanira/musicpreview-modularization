@@ -1,5 +1,5 @@
 {
-  "originHash" : "45d8c0a22f82d7b5ed134738b61d38a7f70c525c7810fbb64f216773b40098fb",
+  "originHash" : "c4a7fc87c4fa4990011e5d1a292c22e74c20aa0e0364e8276a0269c2ba130073",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "bda9ed57d72988a3a2ada33d824583541f86eac6",
         "version" : "5.12.2"
+      }
+    },
+    {
+      "identity" : "common-musicpreview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/deanira/common-musicpreview.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "27030335165e315d299d469155630bf646600070"
       }
     },
     {
