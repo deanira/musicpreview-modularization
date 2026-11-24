@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
       .package(url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "8.15.2")),
-      .package(url: "https://github.com/deanira/common-musicpreview.git", branch: "main"),
+      .package(url: "https://github.com/deanira/common-musicpreview.git", from: "1.0.1"),
       .package(path: "../Core"),
       .package(path: "../Player"),
       .package(path: "../Profile"),

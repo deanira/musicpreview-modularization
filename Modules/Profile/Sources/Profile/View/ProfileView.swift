@@ -65,7 +65,7 @@ public struct ProfileView: View {
   private var profileInfo: some View {
     VStack(alignment: .leading, spacing: 16) {
       if let avatarFileName = viewModel.profile.avatarFileName {
-        Image(avatarFileName)
+        Image(avatarFileName, bundle: .module)
           .resizable()
           .scaledToFit()
           .clipShape(RoundedRectangle(cornerRadius: 12))

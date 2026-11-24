@@ -14,7 +14,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-      .package(url: "https://github.com/deanira/common-musicpreview.git", branch: "main"),
+      .package(url: "https://github.com/deanira/common-musicpreview.git", from: "1.0.1"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
