@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+env:
+  DESTINATION: 'platform=iOS Simulator,name=iPhone 17 Pro'
+
+jobs:
+  module-tests:
+    runs-on: macos-26
+    strategy:
+      fail-fast: false
+      matrix:
+        module: [Core, Home, Library, Player, Profile, Search]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_26.6.app
+
+      - name: List simulators
+        run: xcrun simctl list devices available
+        
+      - name: Cache SwiftPM
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Developer/Xcode/DerivedData/**/SourcePackages
+          key: spm-${{ matrix.module }}-${{ hashFiles('Modules/**/Package.resolved') }}
+
+      - name: Test ${{ matrix.module }}
+        working-directory: Modules/${{ matrix.module }}
+        run: |
+          xcodebuild test \
+            -scheme ${{ matrix.module }} \
+            -destination "$DESTINATION" \
+            -skipPackagePluginValidation
+
+  app-tests:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_26.6.app
+
+      - name: List simulators
+        run: xcrun simctl list devices available
+        
+      - name: Build and test app
+        run: |
+          xcodebuild test \
+            -project MusicPreview/MusicPreview.xcodeproj \
+            -scheme MusicPreview \
+            -destination "$DESTINATION" \
+            -skipPackagePluginValidation
