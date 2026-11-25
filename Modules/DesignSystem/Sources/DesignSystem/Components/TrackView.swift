@@ -7,30 +7,33 @@
 
 import Kingfisher
 import SwiftUI
-import Core
 
 public struct TrackView: View {
-  let track: TrackModel
+  let title: String
+  let artist: String
+  let imageUrl: String
   let nowPlaying: Bool?
 
-  public init(track: TrackModel, nowPlaying: Bool? = nil) {
-    self.track = track
+  public init(title: String, artist: String, imageUrl: String, nowPlaying: Bool? = nil) {
+    self.title = title
+    self.artist = artist
+    self.imageUrl = imageUrl
     self.nowPlaying = nowPlaying
   }
 
   public var body: some View {
     HStack {
-      if let artworkUrlSmall = URL(string: track.artworkUrlSmall) {
-        KFImage(artworkUrlSmall)
+      if let imageUrl = URL(string: imageUrl) {
+        KFImage(imageUrl)
           .resizable()
           .frame(width: 60, height: 60)
           .clipShape(RoundedRectangle(cornerRadius: 8))
       }
 
       VStack(alignment: .leading) {
-        Text(track.title)
+        Text(title)
           .bold()
-        Text(track.artist)
+        Text(artist)
       }
 
       Spacer()

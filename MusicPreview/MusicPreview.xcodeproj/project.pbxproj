@@ -18,6 +18,7 @@
 		A79E2BB430AAC2E100ACE3F5 /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = A79E2BB330AAC2E100ACE3F5 /* Profile */; };
 		A79E2BB730AAC2F100ACE3F5 /* Search in Frameworks */ = {isa = PBXBuildFile; productRef = A79E2BB630AAC2F100ACE3F5 /* Search */; };
 		A7C9F84530B2D3160011E05E /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = A7C9F84430B2D3160011E05E /* Common */; };
+		A7F52EEB30B698C600447F42 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = A7F52EEA30B698C600447F42 /* DesignSystem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 				A79E2BB430AAC2E100ACE3F5 /* Profile in Frameworks */,
 				A79E2BB130AAC2D200ACE3F5 /* Player in Frameworks */,
 				A79E2BAE30AAC2C200ACE3F5 /* Library in Frameworks */,
+				A7F52EEB30B698C600447F42 /* DesignSystem in Frameworks */,
 				A72A206330B4739100D24436 /* Common in Frameworks */,
 				A7255879309DDBF0002AB147 /* RealmSwift in Frameworks */,
 				A79E2BA830AAC29C00ACE3F5 /* Core in Frameworks */,
@@ -126,6 +128,7 @@
 				A79E2BB630AAC2F100ACE3F5 /* Search */,
 				A7C9F84430B2D3160011E05E /* Common */,
 				A72A206230B4739100D24436 /* Common */,
+				A7F52EEA30B698C600447F42 /* DesignSystem */,
 			);
 			productName = MyApp;
 			productReference = 000000000000000000000120 /* MusicPreview.app */;
@@ -192,6 +195,7 @@
 				A79E2BB230AAC2E100ACE3F5 /* XCLocalSwiftPackageReference "../Modules/Profile" */,
 				A79E2BB530AAC2F100ACE3F5 /* XCLocalSwiftPackageReference "../Modules/Search" */,
 				A72A206130B4739100D24436 /* XCRemoteSwiftPackageReference "common-musicpreview" */,
+				A7F52EE930B698C600447F42 /* XCLocalSwiftPackageReference "../Modules/DesignSystem" */,
 			);
 			preferredProjectObjectVersion = 90;
 			productRefGroup = 000000000000000000000001;
@@ -571,6 +575,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Modules/Search;
 		};
+		A7F52EE930B698C600447F42 /* XCLocalSwiftPackageReference "../Modules/DesignSystem" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Modules/DesignSystem;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -656,6 +664,10 @@
 		A7C9F84430B2D3160011E05E /* Common */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Common;
+		};
+		A7F52EEA30B698C600447F42 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

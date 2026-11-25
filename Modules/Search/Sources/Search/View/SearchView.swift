@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Home
+import DesignSystem
 import Player
 import Profile
 
@@ -24,7 +24,12 @@ public struct SearchView: View {
             playerViewModel.play(track)
             playerViewModel.showNowPlaying = true
           } label: {
-            TrackView(track: track, nowPlaying: playerViewModel.track?.id == track.id)
+            TrackView(
+              title: track.title,
+              artist: track.artist,
+              imageUrl: track.artworkUrlSmall,
+              nowPlaying: playerViewModel.track?.id == track.id
+            )
           }
           .buttonStyle(.plain)
           .listRowSeparator(.hidden, edges: track.id == viewModel.resultTracks.first?.id ? .top : [])

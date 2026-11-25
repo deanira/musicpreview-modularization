@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
+import DesignSystem
 import Player
 import Profile
-import Home
 
 public struct LibraryView: View {
   @EnvironmentObject var viewModel: LibraryViewModel
@@ -44,7 +44,12 @@ public struct LibraryView: View {
           playerViewModel.play(track)
           playerViewModel.showNowPlaying = true
         } label: {
-          TrackView(track: track, nowPlaying: playerViewModel.track?.id == track.id)
+          TrackView(
+            title: track.title,
+            artist: track.artist,
+            imageUrl: track.artworkUrlSmall,
+            nowPlaying: playerViewModel.track?.id == track.id
+          )
         }
         .buttonStyle(.plain)
         .listRowSeparator(.hidden, edges: track.id == viewModel.savedTracks.first?.id ? .top : [])

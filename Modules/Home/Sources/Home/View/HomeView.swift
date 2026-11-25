@@ -7,7 +7,7 @@
 
 import Kingfisher
 import SwiftUI
-
+import DesignSystem
 import Player
 import Profile
 
@@ -25,7 +25,12 @@ public struct HomeView: View {
             playerViewModel.play(track)
             playerViewModel.showNowPlaying = true
           } label: {
-            TrackView(track: track, nowPlaying: playerViewModel.track?.id == track.id)
+            TrackView(
+              title: track.title,
+              artist: track.artist,
+              imageUrl: track.artworkUrlSmall,
+              nowPlaying: playerViewModel.track?.id == track.id
+            )
           }
           .buttonStyle(.plain)
           .listRowSeparator(.hidden, edges: track.id == viewModel.topTracks.first?.id ? .top : [])
@@ -48,7 +53,7 @@ public struct HomeView: View {
         ProgressView()
       } else if !viewModel.errorMessage.isEmpty {
         VStack {
-          Text("Error: \(viewModel.errorMessage)")
+          Text(String(format: "home_label_error".localized(), viewModel.errorMessage))
             .multilineTextAlignment(.center)
           Button {
             viewModel.fetchTopTracks()
