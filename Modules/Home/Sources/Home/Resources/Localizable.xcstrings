@@ -1,7 +1,23 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-
+    "home_label_error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error: %s"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error: %s"
+          }
+        }
+      }
+    }
   },
   "version" : "1.3"
 }
