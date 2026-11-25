@@ -63,7 +63,7 @@ The project follows **MVVM** combined with **Clean Architecture** principles, us
 │ Domain         UseCases · Models · Requests  │
 │                Repository protocols          │
 ├──────────────────────────────────────────────┤
-│ Data           MusicRepository               │
+│ Data           Repository impl               │
 │                Remote (Alamofire) · Local    │
 └──────────────────────────────────────────────┘
 ```
@@ -71,7 +71,7 @@ The project follows **MVVM** combined with **Clean Architecture** principles, us
 - **View** – SwiftUI views, kept free of business logic.
 - **ViewModel** – `ObservableObject` classes exposing `@Published` state; they talk to use cases only.
 - **UseCase** – a single unit of business logic (e.g. search tracks, save a track).
-- **Repository** – `MusicRepository` abstracts the data sources so the domain layer doesn't know where data comes from.
+- **Repository** – `Repository imp` abstracts the data sources so the domain layer doesn't know where data comes from.
 - **Data sources** – *Remote* (iTunes API via Alamofire) and *Local* (Realm / `UserDefaults`). Async work is wrapped in Combine publishers (`Deferred { Future }`).
 
 ### Reactive data flow
@@ -131,32 +131,3 @@ musicpreview-modularization/
     ├── Common/              # Networking utilities (NetworkService, URLRequestUtils)
     └── DesignSystem/        # Reusable UI components & styling
 ```
-
----
-
-## Getting Started
-
-### Requirements
-
-- Xcode 15 or later *(adjust to your project's setting)*
-- iOS 16.0+ *(adjust to your project's deployment target)*
-- Swift 5.9+
-
-### Run
-
-```bash
-git clone https://github.com/deanira/musicpreview-modularization.git
-cd musicpreview-modularization
-open MusicPreview/MusicPreview.xcodeproj
-```
-
-Xcode resolves the local packages and third-party dependencies automatically via Swift Package Manager. Select the `MusicPreview` scheme and run on a simulator or device.
-
----
-
-## Conventions
-
-- One responsibility per module; keep public APIs small and explicit.
-- ViewModels use `ObservableObject`.
-- Dependencies are injected and created once, centrally. Avoid global singletons such as a shared `AF` or creating a new `Realm` per call.
-- Prefer reactive streams (Combine) over one-shot callbacks for data that can change.
