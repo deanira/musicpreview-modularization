@@ -17,7 +17,10 @@ final class SearchRepository {
     self.remote = remote
   }
 
-  @MainActor static let sharedInstance: (SearchLocaleDataSourceProtocol, SearchRemoteDataSourceProtocol) -> SearchRepository = { locale, remote in
+  @MainActor static let sharedInstance: (
+    SearchLocaleDataSourceProtocol,
+    SearchRemoteDataSourceProtocol
+  ) -> SearchRepository = { locale, remote in
     SearchRepository(locale: locale, remote: remote)
   }
 }

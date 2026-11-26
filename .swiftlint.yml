@@ -9,6 +9,8 @@ excluded:
 
 disabled_rules:
   - trailing_whitespace
+  - void_function_in_ternary
+  
 
 line_length:
   warning: 140

@@ -16,7 +16,7 @@ public final class PlayerViewModel: ObservableObject {
   private var cancellables: Set<AnyCancellable> = []
 
   // MARK: - UI state
-  @Published public var track: TrackModel? = nil
+  @Published public var track: TrackModel?
   @Published private(set) var isLoading = false
   @Published private(set) var errorMessage = ""
   @Published private(set) var message = ""
